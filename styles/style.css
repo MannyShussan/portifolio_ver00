@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+:root {
+    --font-color1: #EAE7B1;
+    --font-color2: #A6BB8D;
+    --font-color3: #61876E;
+    --font-color4: #3C6255;
+    --font-color5: #060606;
+    --backgroud_color: #F6F6F6;
+    --background_color2: #EFF5F5;
+
+    --font-type1: 'Mulish', sans-serif;
+    --font-type2: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--backgroud_color2);
+    width: 100vw;
+    height: 100vh;
+}
+
+.navigation {
+    max-width: 100vw;
+    background-color: var(--font-color3);
+    font-family: var(--font-type1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10% 20px 10%;
+}
+
+#menu-h ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu-h ul li {
+    display: inline-block;
+}
+
+#menu-h ul li a {
+    text-decoration: none;
+    color: var(--font-color1);
+    padding: 20px;
+    display: inline;
+    transition: background .2s;
+}
+
+#menu-h ul li a:hover,
+.documentation a:hover {
+    background-color: var(--font-color2);
+    color: var(--backgroud_color);
+}
+
+#menu-h ul li:first-child a {
+    background-color: var(--font-color4);
+}
+
+.presentation {
+    background-color: var(--backgroud_color);
+    font-family: var(--font-type2);
+    color: var(--font-color4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10px 20px 10px;
+    gap: 80px;
+    border: 50px 20px;
+    margin: 8% 7% 0px 7%;
+}
+
+.my_name {
+    width: 50vw;
+    padding: 10%;
+}
+
+.my_picture {
+    width: 20%;
+}
+
+
+
+.documentation {
+    background-color: var(--background_color2);
+    font-family: var(--font-type2);
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10% 20px 10%;
+    padding: 10%;
+}
+
+.documentation a {
+    text-decoration: none;
+    color: var(--font-color1);
+    background-color: var(--font-color3);
+    display: inline-block;
+    padding: 10px;
+    max-width: 95px;
+}
+
+.documentation h1,
+.documentation b {
+    color: var(--font-color4);
+}
+
+@media(max-width: 750px) {
+    .navigation {
+        flex-direction: column;
+        max-width: 60vw;
+        padding: 0;
+    }
+
+    #menu-h{
+        min-width: 100%;
+    }
+
+    #menu-h ul li a,
+    #menu-h ul li{
+        display: block;
+    }
+    
+    .presentation{
+        flex-direction: column-reverse;
+        padding: 20px;
+        align-items: center;
+    }
+    
+    .presentation img{
+        width: 70vw;
+    }
+}
